@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int inicioDia, inicioHora, inicioMinuto, inicioSegundo;
+    int fimDia, fimHora, fimMinuto, fimSegundo;
+
+    scanf("Dia %d", &inicioDia);
+    scanf("%d : %d : %d", &inicioHora, &inicioMinuto, &inicioSegundo);
+
+    scanf("Dia %d", &fimDia);
+    scanf("%d : %d : %d", &fimHora, &fimMinuto, &fimSegundo);
+
+    int segundosInicio = ((inicioDia * 24 + inicioHora) * 60 + inicioMinuto) * 60 + inicioSegundo;
+    int segundosFim = ((fimDia * 24 + fimHora) * 60 + fimMinuto) * 60 + fimSegundo;
+
+    int diferencaSegundos = segundosFim - segundosInicio;
+
+    int dias = diferencaSegundos / (24 * 3600);
+    diferencaSegundos %= (24 * 3600);
+    int horas = diferencaSegundos / 3600;
+    diferencaSegundos %= 3600;
+    int minutos = diferencaSegundos / 60;
+    int segundos = diferencaSegundos % 60;
+
+    printf("%d dia(s) %d hora(s) %d minuto(s) %d segundo(s)\n", dias, horas, minutos, segundos);
+
+    return 0;
+}
