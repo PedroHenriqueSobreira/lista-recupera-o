@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int C; // Número de casos de teste
+    scanf("%d", &C);
+
+    while (C > 0) {
+        int N; // Número de termos da soma
+        scanf("%d", &N);
+
+        int resultado = N % 2 == 0 ? 0 : 1;
+        printf("%d\n", resultado);
+
+        C--;
+    }
+
+    return 0;
+}
