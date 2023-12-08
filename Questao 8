@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    while (N--) {
+        int T;
+        scanf("%d", &T);
+
+        if (T == 0) {
+            printf("1 A.C.\n");
+        } else if (T > 0) {
+            printf("%d A.C.\n", 2015 - T);
+        } else {
+            printf("%d D.C.\n", 2016 + (-T));
+        }
+    }
+
+    return 0;
+}
